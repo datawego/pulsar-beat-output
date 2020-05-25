@@ -28,7 +28,7 @@ package main
 
 import (
     "os"
-    _ "github.com/streamnative/pulsar-beat-output/pulsar"
+    _ "/pulsar"
     "github.com/elastic/beats/x-pack/filebeat/cmd"
 )
 
