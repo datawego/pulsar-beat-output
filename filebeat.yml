@@ -25,7 +25,8 @@ filebeat.inputs:
 
   # Paths that should be crawled and fetched. Glob based paths.
   paths:
-    - /var/log/*.log
+    # - /var/log/*.log
+    - ~/log/collector/parsed/*.log
     #- c:\programdata\elasticsearch\logs\*
 
   # Exclude lines. A list of regular expressions to match. It drops the lines that are
@@ -149,9 +150,9 @@ setup.kibana:
 #   pretty: true
 # -------------------------- pulsar output ------------------------------
 output.pulsar:
-  url: "pulsar://pulsar-standalone3:6650"
-  topic: my_topic
-  name: test123
+  url: "pulsar://pulsar1.local-gruter.com:6650"
+  topic: cuz360/collector/ga
+  name: filebeat
 
 #-------------------------- Elasticsearch output ------------------------------
 # output.elasticsearch:
